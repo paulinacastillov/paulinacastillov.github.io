@@ -1,19 +1,29 @@
 ---
 interface Props {
     institution: string;
+    location: string;
     position: string;
     startDate: string;
     endDate: string;
     description: string[];
 }
 
-const {institution, position, startDate, endDate, description} = Astro.props;
+const {institution, location, position, startDate, endDate, description} = Astro.props;
 ---
 
 <li class="mb-5 ms-4">
     <div class="absolute w-2 h-2 rounded-full mt-3 -start-1 dark:bg-orange"></div>
-    <h3>{position} —  {institution}</h3>
-    <time class="text-base -mt-1 opacity-80">{startDate} —  {endDate}</time>
+
+    <div class="flex flex-row space-y-0 justify-between items-center">
+        <h3>{position}</h3>
+        <p class="text-base opacity-80 hidden md:inline">{location}</p>
+    </div> 
+
+    <div class="flex flex-col md:flex-row space-y-1 justify-between">
+        <i>{institution}</i>   
+        <time class="text-base opacity-80">{startDate} —  {endDate}</time>
+    </div> 
+ 
     <ul class="text-base list-disc mt-1.5 pl-4">
         {description.map((item) => (<li>{item}</li>))}
     </ul>
