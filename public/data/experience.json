@@ -1,0 +1,27 @@
+[
+    {
+        "institution": "Netsys Research Lab @ The University of Oklahoma",
+        "position": "Graduate Research Assistant",
+        "location": "Norman, OK, USA",
+        "startDate": "January 2024",
+        "endDate": "Present",
+        "description": [
+            "Developed an optimization model for graph design based on multi-scenario analysis, each with varying demands, ensuring the graph adapts to fluctuations and provides a resilient solution.",
+            "Focused on creating a network that efficiently accommodates demand variability, enhancing resilience and reliability in complex systems."
+        ]
+    },
+    {
+        "institution": "Latin American Reserve Fund",
+        "position": "Financial Management Assistant",
+        "location": "Bogotá, Colombia",
+        "startDate": "January 2023",
+        "endDate": "July 2023",
+        "description": [
+            "Developed and implemented predictive financial models in Python, including a dollar inflation model with an accuracy rate of 99.8%, driving data-driven decision-making and reducing forecasting errors in public and private investments.",
+            "Diagnosed and resolved critical issues in the data processing pipeline, leading a team initiative to refine methodologies, which improved overall data accuracy and operational efficiency.",
+            "Designed and delivered comprehensive educational materials to effectively communicate complex mathematical models used in economic analysis, enhancing cross-functional understanding and application."
+        ]
+    }
+
+]
+

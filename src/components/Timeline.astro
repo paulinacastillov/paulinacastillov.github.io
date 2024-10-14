@@ -1,0 +1,16 @@
+---
+import CVEntry from '../components/CVEntry.astro'
+import cvEntries from '../../public/data/experience.json'
+---
+
+<ol class={`relative border-s dark:border-orange ${Astro.props}`}>                  
+    {cvEntries.map((entry) => (
+        <CVEntry
+            position={entry.position}
+            institution={entry.institution}
+            startDate={entry.startDate}
+            endDate={entry.endDate}
+            description={entry.description}
+        />
+    ))}
+</ol>
