@@ -7,6 +7,7 @@ interface Props {
 const { title, id } = Astro.props
 ---
 
+<!-- formato para crear una sección con titulo y id, el id se usa para poder hacer cambios de pagina -->
 <div id={id}>
     <h2 class="mt-10 mb-4">{title}</h2>
     <slot />

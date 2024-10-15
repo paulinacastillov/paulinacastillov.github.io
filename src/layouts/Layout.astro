@@ -12,33 +12,36 @@ import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
+<!-- Esto es lo que siempre va en las subpaginas de  mi pag web-->
 <html lang="en">
 	<head>
+		<!-- estandar -->
 		<meta charset="UTF-8" />
 		<meta name="description" content="Paulina Castillo webpage" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Llamado a google -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- La fuente   -->
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"><!-- La fuente x2 -->
 		<title>{title}</title>
-		<ViewTransitions />
+		<ViewTransitions /> 
 	</head>
-	<body>
-		<Navbar />
+	<body><!-- lo que irá en esta página en especifico -->
+		<Navbar /><!-- barra de navegación-->
 		<main>
 			<Card 
 				name='Paulina Castillo'
 				institution='The University of Oklahoma'
 				position='Data Scientist'
 			/>
-			<slot />
+			<slot /> <!-- deja como espacio para poner más cosas -->
 		</main>
-		<Footer />
+		<Footer /> <!--Margen inferior de la página  -->
 	</body>
 </html>
-<style is:global>
+<!-- finos detalles de coquetería --> 
+<style is:global> 
 	html {
 		font-family: "EB Garamond", system-ui, sans-serif;
 		color-scheme: light dark;
@@ -68,8 +71,8 @@ import Footer from '../components/Footer.astro';
 
 	a {
 		color: #bf8673;
-		text-decoration-line: underline;
-		text-decoration-style: wavy;
+		/* text-decoration-line: underline; */
+		/* text-decoration-style: wavy; */
 	}
 
 	h1 {

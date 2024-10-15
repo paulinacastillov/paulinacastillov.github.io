@@ -1,12 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import CautionBox from "../components/CautionBox.astro"
 ---
 
 <Layout title="Paulina Castillo">
 
 	<h2 class="mt-10 mb-4">Presentation video</h2>
-	<iframe 
-		class="rounded-lg shadow-lg w-full h-64 md:h-96"
+	<!-- Poner el aviso de poner subtitulos -->
+	<CautionBox  > Please set the subtitles in English.</CautionBox>
+
+	<iframe
+		class="rounded-lg shadow-lg w-full h-64 md:h-96 mt-5"
 		src="https://www.youtube.com/embed/e_PV7Ig36_E" 
 		title="YouTube video player" 
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

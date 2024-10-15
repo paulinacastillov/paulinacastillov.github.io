@@ -12,14 +12,17 @@ interface Props {
 const {institution, location, position, startDate, endDate, year, description} = Astro.props;
 ---
 
-<li class="mb-5 ms-4">
+<li class="mb-5 ms-4"> 
+    <!-- EL bullet -->
     <div class="absolute size-2.5 bg-orange rounded-full mt-2.5 -start-[5.5px] border border-orange dark:border-orange dark:bg-orange"></div>
 
+    <!-- cajita de posición y ubicacion -->
     <div class="flex flex-row space-y-0 justify-between items-center">
         <h3>{position}</h3>
         <p class="text-base opacity-80 hidden md:inline">{location}</p>
     </div>
 
+    <!-- Pone las fechas con formato condicional  -->
     <div class="flex flex-col md:flex-row space-y-1 justify-between">
         <i>{institution}</i>   
         {(startDate==="" && endDate==="") ? 
@@ -28,6 +31,7 @@ const {institution, location, position, startDate, endDate, year, description} =
         }
     </div>
     
+    <!-- Si hay items en la descripción aparecen, si no,no  -->
     {description.length<=1 ? 
         (<p class="text-base mt-1.5">{description[0]}</p>) :
         (<ul class="text-base list-disc mt-1.5 pl-4">

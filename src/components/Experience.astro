@@ -3,6 +3,9 @@ import CVEntry from '../components/CVEntry.astro'
 import cvEntries from '../../public/data/experience.json'
 ---
 
+<!-- Esto es un for para colocar la experiencia -->
+ 
+<!-- Si quiero cambiar mi experiencia ir a json en public, si quiero cambiar el formato ir Cventry -->
 <ol class={`relative border-s dark:border-orange ${Astro.props}`}>                  
     {cvEntries.map((entry) => (
         <CVEntry
