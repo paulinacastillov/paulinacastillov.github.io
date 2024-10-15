@@ -8,6 +8,7 @@ interface Props {
 const { name, institution, position } = Astro.props;
 
 import headshot from '../../public/assets/headshot.webp'
+import { Image } from 'astro:assets'
 
 import IconPill from '../components/IconPill.astro'
 import GitHubIcon from '../../public/assets/icons/GitHubIcon.astro'
@@ -16,9 +17,9 @@ import EmailIcon from '../../public/assets/icons/EmailIcon.astro'
 ---
 
 <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-4">
-    <img
-        src={headshot.src}
-        alt="Profile Photo"
+    <Image
+        src={headshot}
+        alt="Paulina Castillo"
         draggable="false"
         class="w-32 h-32 rounded-full mb-4 md:mb-0" />
     <div class="flex flex-col justify-center text-center pl-5 md:text-left">

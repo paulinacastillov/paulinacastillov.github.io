@@ -3,28 +3,35 @@ interface Props {
     institution: string;
     location: string;
     position: string;
-    startDate: string;
-    endDate: string;
+    startDate?: string;
+    endDate?: string;
+    year?: number;
     description: string[];
 }
 
-const {institution, location, position, startDate, endDate, description} = Astro.props;
+const {institution, location, position, startDate, endDate, year, description} = Astro.props;
 ---
 
 <li class="mb-5 ms-4">
-    <div class="absolute w-2 h-2 rounded-full mt-3 -start-1 dark:bg-orange"></div>
+    <div class="absolute size-2.5 bg-orange rounded-full mt-2.5 -start-[5.5px] border border-orange dark:border-orange dark:bg-orange"></div>
 
     <div class="flex flex-row space-y-0 justify-between items-center">
         <h3>{position}</h3>
         <p class="text-base opacity-80 hidden md:inline">{location}</p>
-    </div> 
+    </div>
 
     <div class="flex flex-col md:flex-row space-y-1 justify-between">
         <i>{institution}</i>   
-        <time class="text-base opacity-80">{startDate} —  {endDate}</time>
-    </div> 
- 
-    <ul class="text-base list-disc mt-1.5 pl-4">
-        {description.map((item) => (<li>{item}</li>))}
-    </ul>
+        {(startDate==="" && endDate==="") ? 
+            (<time class="text-base opacity-80">{year}</time>) :
+            (<time class="text-base opacity-80">{startDate} —  {endDate}</time>)
+        }
+    </div>
+    
+    {description.length<=1 ? 
+        (<p class="text-base mt-1.5">{description[0]}</p>) :
+        (<ul class="text-base list-disc mt-1.5 pl-4">
+            {description.map((item) => (<li>{item}</li>))}
+        </ul>)
+    }
 </li>

@@ -1,15 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro'
-
+import Section from '../components/Section.astro'
 import AboutMe from '../components/AboutMe.astro'
+import Skills from '../components/Skills.astro'
 import Experience from '../components/Experience.astro'
-import MiniCVEntry from '../components/MiniCVEntry.astro'
+import Leadership from '../components/Leadership.astro'
 ---
 
 <Layout title="Paulina Castillo">
-	<AboutMe />
-	<div id="experience">
-		<h2 class="mt-10 mb-4">Experience</h2>
+	<AboutMe class="mt-12"/>
+	<Section id='skills' title='Skills'>
+		<Skills />
+	</Section>
+	<Section id='experience' title='Experience'>
 		<Experience />
-	</div>
+	</Section>
+	<Section id='leadership' title='Leadership & Service'>
+		<Leadership />
+	</Section>
 </Layout>

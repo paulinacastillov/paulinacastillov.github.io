@@ -1,0 +1,18 @@
+---
+import CVEntry from '../components/CVEntry.astro'
+import leadershipEntries from '../../public/data/leadership.json'
+---
+
+<ol class={`relative border-s dark:border-orange ${Astro.props}`}>                  
+    {leadershipEntries.map((entry) => (
+        <CVEntry 
+            position={entry.position}
+            institution={entry.institution}
+            location={entry.location}
+            startDate=''
+            endDate=''
+            year={entry.year}
+            description={entry.description}
+        />
+    ))}
+</ol>

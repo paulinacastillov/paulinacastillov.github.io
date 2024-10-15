@@ -1,26 +1,23 @@
 [
     {
-        "institution": "The University of Oklahoma"
+        "institution": "The University of Oklahoma",
         "position": "Senator of the Master's in Data Science and Analytics",
         "location": "Norman, OK, USA",
-        "startDate": "August 2024",
-        "endDate": "Present",
-        "description": "Contributed to decision-making to enhance the university environment, including approving the budget for student associations at the University of Oklahoma."
+        "year": 2024,
+        "description": ["Contributed to decision-making to enhance the university environment, including approving the budget for student associations at the University of Oklahoma."]
     },
     {
         "institution": "Women for Colombia Foundation",
         "position": "Volunteer Speaker",
         "location": "Bogotá, Colombia",
-        "startDate": "August 2023",
-        "endDate": "December 2023",
-        "description": "Participated as a panelist, providing guidance and sharing experiences to help high school senior girls explore their career options and make informed decisions about their futures."
+        "year": 2023,
+        "description": ["Participated as a panelist, providing guidance and sharing experiences to help high school senior girls explore their career options and make informed decisions about their futures."]
     },
     {
         "institution": "Universidad Nacional de Colombia",
         "position": "Student Volunteer",
         "location": "Bogotá, Colombia",
-        "startDate": "January 2023",
-        "endDate": "July 2023",
-        "description": ""
+        "year": 2022,
+        "description": ["Plan Par is an initiative at the Universidad Nacional de Colombia to accompany students from the Special Admission Program, providing a guide through their first year at the university to reduce desertion rates of students from peripheral regions."]
     }
 ]

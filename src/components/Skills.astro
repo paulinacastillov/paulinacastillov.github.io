@@ -1,0 +1,23 @@
+---
+const skills = [
+  "Mathematical logic",
+  "Python",
+  "R",
+  "Microsoft Excel",
+  "SQL",
+  "Google Analytics",
+  "Problem-solving",
+  "Azure",
+  "Tableau",
+  "Adobe Premier",
+  "Adobe Illustrator",
+  "Spanish (Native)", 
+];
+---
+<ul class="inline-flex justify-center flex-wrap">
+    {skills.map((skill, index) => (
+        <li class="mx-2 my-0">
+            {skill}{index < skills.length - 1 && <span class="text-orange ml-3"> • </span>}
+        </li>
+    ))}
+</ul>
