@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import CautionBox from "../components/CautionBox.astro"
-import ProjectTabs from "../components/ProjectTabs.astro"
 ---
 
 <Layout title="Paulina Castillo">
@@ -10,16 +9,6 @@ import ProjectTabs from "../components/ProjectTabs.astro"
 	<!-- Poner el aviso de poner subtitulos -->
 	<!-- <CautionBox  > Please set the subtitles in English.</CautionBox>
  -->
-	<!-- Si quieres mantener el video para más abajo, descomenta y reubícalo -->
-<!--
-<iframe
-  class="rounded-lg shadow-lg w-full h-64 md:h-96 mt-8"
-  src="https://www.youtube.com/embed/e_PV7Ig36_E"
-  title="YouTube video player"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
--->
 
 
 <section class="relative overflow-hidden rounded-2xl
@@ -33,72 +22,34 @@ import ProjectTabs from "../components/ProjectTabs.astro"
       The Beauty of Less: Optimization and Machine Learning in Network Design
     </h1>
 
-    <!-- Actions -->
-    <!-- CTA Buttons: big & clickable -->
-
-	<!-- CTA Buttons: big, neutral, on-brand -->
-<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-  <!-- Motivación -->
-  <a href="#motivacion"
-     class="group relative flex items-center justify-center rounded-2xl
-            px-6 py-5 text-lg md:text-xl font-semibold
-            bg-zinc-800 text-zinc-100 border border-zinc-700 shadow-lg
-            hover:bg-zinc-700 hover:shadow-zinc-700/40 hover:-translate-y-0.5 active:translate-y-0
-            transition-all focus:outline-none focus:ring-4 focus:ring-zinc-600/40">
-    <span class="mr-2">💡</span> Motivación
-  </a>
-
-  <!-- ¿Dónde nació esto? -->
-  <a href="#origen"
-     class="group relative flex items-center justify-center rounded-2xl
-            px-6 py-5 text-lg md:text-xl font-semibold
-            bg-zinc-800 text-zinc-100 border border-zinc-700 shadow-lg
-            hover:bg-zinc-700 hover:shadow-zinc-700/40 hover:-translate-y-0.5 active:translate-y-0
-            transition-all focus:outline-none focus:ring-4 focus:ring-zinc-600/40">
-    <span class="mr-2">📍</span> ¿Dónde nació esto?
-  </a>
-
-  <!-- Modelo matemático -->
-  <a href="#modelo-matematico"
-     class="group relative flex items-center justify-center rounded-2xl
-            px-6 py-5 text-lg md:text-xl font-semibold
-            bg-zinc-800 text-zinc-100 border border-zinc-700 shadow-lg
-            hover:bg-zinc-700 hover:shadow-zinc-700/40 hover:-translate-y-0.5 active:translate-y-0
-            transition-all focus:outline-none focus:ring-4 focus:ring-zinc-600/40">
-    <span class="mr-2">🧮</span> Modelo matemático
-  </a>
-
-  <!-- ¿Cuál es la magia detrás de esto? -->
-  <a href="#magia"
-     class="group relative flex items-center justify-center rounded-2xl
-            px-6 py-5 text-lg md:text-xl font-semibold
-            bg-zinc-800 text-zinc-100 border border-zinc-700 shadow-lg
-            hover:bg-zinc-700 hover:shadow-zinc-700/40 hover:-translate-y-0.5 active:translate-y-0
-            transition-all focus:outline-none focus:ring-4 focus:ring-zinc-600/40">
-    <span class="mr-2">✨</span> ¿Cuál es la magia detrás de esto?
-  </a>
-
-  <!-- Beyond the compute -->
-  <a href="#beyond-compute"
-     class="group relative flex items-center justify-center rounded-2xl
-            px-6 py-5 text-lg md:text-xl font-semibold
-            bg-zinc-800 text-zinc-100 border border-zinc-700 shadow-lg
-            hover:bg-zinc-700 hover:shadow-zinc-700/40 hover:-translate-y-0.5 active:translate-y-0
-            transition-all focus:outline-none focus:ring-4 focus:ring-zinc-600/40">
-    <span class="mr-2">🚀</span> Beyond the compute
-  </a>
-
-  <!-- Resultados -->
-  <a href="#resultados"
-     class="group relative flex items-center justify-center rounded-2xl
-            px-6 py-5 text-lg md:text-xl font-semibold
-            bg-zinc-800 text-zinc-100 border border-zinc-700 shadow-lg
-            hover:bg-zinc-700 hover:shadow-zinc-700/40 hover:-translate-y-0.5 active:translate-y-0
-            transition-all focus:outline-none focus:ring-4 focus:ring-zinc-600/40">
-    <span class="mr-2">🏁</span> Resultados: el final de la travesía
-  </a>
-</div>
-
+	    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="#methodology"
+         class="inline-flex items-center rounded-xl bg-zinc-100 text-zinc-900
+                px-4 py-2.5 text-sm font-medium hover:bg-white/90">
+        See methodology
+      </a>
+	  <a href="#results"
+         class="inline-flex items-center rounded-xl border border-zinc-700
+                px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800/60">
+        View results & plots
+      </a>
+	  <a href="#Motivatoin"
+         class="inline-flex items-center rounded-xl border border-zinc-700
+                px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800/60">
+        View results & plots
+      </a>
+	  <a href="#Math Model"
+         class="inline-flex items-center rounded-xl border border-zinc-700
+                px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800/60">
+        View results & plots
+      </a>
+      <a href="#Pushing the limits"
+         class="inline-flex items-center rounded-xl border border-zinc-700
+                px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800/60">
+        View results & plots
+      </a>
+    </div>
+  </div>
 
     <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-300">
       You open your eyes peacefully at 7:30 on a Saturday morning, until you realize it’s not Saturday, and it’s definitely not 7:30. You’re late for work. You rush to the shower only to find… no water. Not just in your apartment, the entire neighborhood’s dry. Somewhere, a single broken pipe has thrown the whole system off balance.
@@ -135,10 +86,19 @@ import ProjectTabs from "../components/ProjectTabs.astro"
 </div>
 
 
-
-
-
-	
+    <!-- Actions -->
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="#methodology"
+         class="inline-flex items-center rounded-xl bg-zinc-100 text-zinc-900
+                px-4 py-2.5 text-sm font-medium hover:bg-white/90">
+        See methodology
+      </a>
+      <a href="#results"
+         class="inline-flex items-center rounded-xl border border-zinc-700
+                px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800/60">
+        View results & plots
+      </a>
+    </div>
   </div>
 
   <!-- Decorative network glows (neutral, no blue) -->
@@ -153,8 +113,15 @@ import ProjectTabs from "../components/ProjectTabs.astro"
 
 
 
-
-
-
+<!-- Si quieres mantener el video para más abajo, descomenta y reubícalo -->
+<!--
+<iframe
+  class="rounded-lg shadow-lg w-full h-64 md:h-96 mt-8"
+  src="https://www.youtube.com/embed/e_PV7Ig36_E"
+  title="YouTube video player"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+-->
 
 </Layout>
