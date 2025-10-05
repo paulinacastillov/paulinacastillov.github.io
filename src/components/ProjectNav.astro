@@ -8,15 +8,15 @@ function Link(id: string, label: string) {
   const on   = "bg-zinc-100 text-zinc-900 hover:bg-white/90";
   const off  = "text-zinc-200 hover:bg-zinc-800/60";
   return /* html */ `
-    <a href="/thesis/${id}" class="${base} ${isActive ? on : off}">${label}</a>
+    <a href="/${id}/" class="${base} ${isActive ? on : off}">${label}</a>
   `;
 }
 ---
 
 <div class="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-5 justify-center text-center">
-  <Fragment set:html={Link('abstract','Abstract')} />
+  <Fragment set:html={Link('projects','Abstract')} />
   <Fragment set:html={Link('motivation','Motivation')} />
-  <Fragment set:html={Link('math','Math')} />
-  <Fragment set:html={Link('compute','Compute')} />
+  <Fragment set:html={Link('math','Math Fromulation')} />
+  <Fragment set:html={Link('compute','Computational Limits')} />
   <Fragment set:html={Link('results','Results')} />
 </div>
