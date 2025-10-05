@@ -9,59 +9,77 @@ import CautionBox from "../components/CautionBox.astro"
 	<!-- Poner el aviso de poner subtitulos -->
 	<CautionBox  > Please set the subtitles in English.</CautionBox>
 
-<section class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50 via-white to-cyan-50 shadow-lg p-6 md:p-10 mt-5">
+
+
+<section class="relative overflow-hidden rounded-2xl
+  bg-gradient-to-br from-zinc-800 via-zinc-900 to-black
+  dark:from-zinc-800 dark:via-zinc-900 dark:to-black
+  shadow-lg p-6 md:p-10 mt-5 border border-zinc-800/60">
+
   <div class="max-w-3xl">
-    <h1 class="text-2xl md:text-3xl font-semibold text-gray-900 tracking-tight">
-      The Beauty of Less: Optimization and Machine Learning in Network Desing
+    <h1 class="text-2xl md:text-3xl font-semibold
+       text-zinc-100 tracking-tight">
+      The Beauty of Less: Optimization and Machine Learning in Network Design
     </h1>
-    <p class="mt-4 leading-relaxed text-[1.05rem] text-gray-700">
-You open your eyes peacefully at 7:30 on a Saturday morning, until you realize it’s not Saturday, and it’s definitely not 7:30. You’re late for work. You rush to the shower only to find… no water. Not just in your apartment, the entire neighborhood’s dry. Somewhere, a single broken pipe has thrown the whole system off balance.
-</p>
-Now you’re wondering if there’s a way to get your water back, just like before.
-If you think about it, the neighborhood isn’t just streets and pipes; it’s a graph.
-Every house is a node, every pipe an edge, and the water is the flow that ties them all together. When one edge fails, the entire network must adapt to keep the balance.
-<p class="mt-4 leading-relaxed text-[1.05rem] text-gray-700"></p>
-That’s mostly the question we set out to solve in this research: how to redesign a network based on its flow performance, the amount of water that actually reaches each house.
-By asking that question, we built a model capable of redesigning supply networks using only 66% of the original pipes while preserving 95% of their flow efficiency.
-</p>
-<p class="mt-4 leading-relaxed text-[1.05rem] text-gray-700"></p>
-How did we do it?
-</p>
+
+    <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-300">
+      You open your eyes peacefully at 7:30 on a Saturday morning, until you realize it’s not Saturday, and it’s definitely not 7:30. You’re late for work. You rush to the shower only to find… no water. Not just in your apartment, the entire neighborhood’s dry. Somewhere, a single broken pipe has thrown the whole system off balance.
+    </p>
+    <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-300">
+      Now you’re wondering if there’s a way to get your water back, just like before. If you think about it, the neighborhood isn’t just streets and pipes; it’s a graph. Every house is a node, every pipe an edge, and the water is the flow that ties them all together. When one edge fails, the entire network must adapt to keep the balance.
+    </p>
+    <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-300">
+      That’s mostly the question we set out to solve in this research: how to redesign a network based on its flow performance, the amount of water that actually reaches each house. By asking that question, we built a model capable of redesigning supply networks using only 66% of the original pipes while preserving 90% of their flow efficiency.
+    </p>
+    <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-200">
+      How did we do it?
+    </p>
 
     <!-- Mini-metrics -->
     <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-      <div class="rounded-xl border bg-white/70 backdrop-blur px-4 py-3">
-        <div class="text-sm text-gray-500">Computational limits</div>
-        <div class="text-lg font-semibold text-gray-900">60–70% arcs</div>
-        <div class="text-xs text-gray-500">kept</div>
+      <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-3">
+        <div class="text-sm text-zinc-400">R</div>
+        <div class="text-lg font-semibold text-zinc-100">60–70% arcs</div>
+        <div class="text-xs text-zinc-500">kept</div>
       </div>
-      <div class="rounded-xl border bg-white/70 backdrop-blur px-4 py-3">
-        <div class="text-sm text-gray-500">Flow preserved</div>
-        <div class="text-lg font-semibold text-gray-900">95%+</div>
-        <div class="text-xs text-gray-500">under scenarios</div>
+      <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-3">
+        <div class="text-sm text-zinc-400">Flow preserved</div>
+        <div class="text-lg font-semibold text-zinc-100">95%+</div>
+        <div class="text-xs text-zinc-500">under scenarios</div>
       </div>
-      <div class="rounded-xl border bg-white/70 backdrop-blur px-4 py-3">
-        <div class="text-sm text-gray-500">Compute pushed</div>
-        <div class="text-lg font-semibold text-gray-900">~90% CPU</div>
-        <div class="text-xs text-gray-500">batched MCFP + VPG</div>
+      <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-3">
+        <div class="text-sm text-zinc-400">Compute pushed</div>
+        <div class="text-lg font-semibold text-zinc-100">~90% CPU</div>
+        <div class="text-xs text-zinc-500">batched MCFP + VPG</div>
       </div>
     </div>
 
     <!-- Actions -->
     <div class="mt-6 flex flex-wrap gap-3">
-      <a href="#methodology" class="inline-flex items-center rounded-xl bg-gray-900 text-white px-4 py-2.5 text-sm font-medium hover:bg-gray-800">
+      <a href="#methodology"
+         class="inline-flex items-center rounded-xl bg-zinc-100 text-zinc-900
+                px-4 py-2.5 text-sm font-medium hover:bg-white/90">
         See methodology
       </a>
-      <a href="#results" class="inline-flex items-center rounded-xl bg-white border px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
+      <a href="#results"
+         class="inline-flex items-center rounded-xl border border-zinc-700
+                px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800/60">
         View results & plots
       </a>
     </div>
   </div>
 
-  <!-- Decorative network dots -->
-  <div class="pointer-events-none absolute -right-16 -bottom-16 h-64 w-64 rounded-full bg-cyan-200/30 blur-3xl"></div>
-  <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-indigo-200/30 blur-3xl"></div>
+  <!-- Decorative network glows (neutral, no blue) -->
+  <div class="pointer-events-none absolute -right-16 -bottom-16 h-64 w-64 rounded-full
+              bg-amber-500/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full
+              bg-rose-500/10 blur-3xl"></div>
 </section>
+
+
+
+
+
 
 <!-- Si quieres mantener el video para más abajo, descomenta y reubícalo -->
 <!--
