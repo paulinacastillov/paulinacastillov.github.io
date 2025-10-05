@@ -14,7 +14,7 @@ import CautionBox from "../components/CautionBox.astro"
 	The Beauty of Less: Optimization and Machine Learning in Network Design
 	</h1>
 
-		    <div class="mt-6 flex flex-wrap gap-3">
+<div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 justify-center text-center">
       <a href="#Abstract"
          class="inline-flex items-center rounded-xl bg-zinc-100 text-zinc-900
                 px-4 py-2.5 text-sm font-medium hover:bg-white/90">
@@ -40,7 +40,7 @@ import CautionBox from "../components/CautionBox.astro"
                 px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800/60">
         Results
       </a>
-    </div>
+</div>
 
 <section class="relative overflow-hidden rounded-2xl
   bg-gradient-to-br from-zinc-800 via-zinc-900 to-black
@@ -50,7 +50,7 @@ import CautionBox from "../components/CautionBox.astro"
   <div class="max-w-3xl">
     <h1 class="text-2xl md:text-3xl font-semibold
        text-zinc-100 tracking-tight">
-      Titulo mamalon
+      A problem and a Story:  Project Overview
     </h1>
 
   </div>
@@ -64,46 +64,35 @@ import CautionBox from "../components/CautionBox.astro"
     <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-300">
       That’s mostly the question we set out to solve in this research: how to redesign a network based on its flow performance, the amount of water that actually reaches each house. By asking that question, we built a model capable of redesigning supply networks using only 66% of the original pipes while preserving 90% of their flow efficiency.
     </p>
-    <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-200">
-      How did we do it?
-    </p>
 
-    <!-- Mini-metrics -->
-<div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-  <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-3">
-    <div class="text-sm text-zinc-400">Network reduction</div>
-    <div class="text-lg font-semibold text-zinc-100">−34% structure</div>
-    <div class="text-xs text-zinc-500">66% of original arcs kept</div>
+	<!-- Centered question -->
+<p class="mt-10 mb-4 text-center text-2xl md:text-3xl font-semibold text-zinc-100">
+  How did we do it?
+</p>
+
+<!-- Answer cards -->
+<div class="mx-auto mt-6 grid max-w-3xl grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+  <!-- 1 -->
+  <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-5">
+    <div class="text-sm text-zinc-400">Approach</div>
+    <div class="text-lg font-semibold text-zinc-100">Machine Learning + Optimization</div>
   </div>
 
-  <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-3">
-    <div class="text-sm text-zinc-400">Flow efficiency</div>
-    <div class="text-lg font-semibold text-zinc-100">95% preserved</div>
-    <div class="text-xs text-zinc-500">under varying demand</div>
+  <!-- 2 -->
+  <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-5">
+    <div class="text-sm text-zinc-400">Exploration scale</div>
+    <div class="text-lg font-semibold text-zinc-100">&gt;10⁴⁰ possible solutions</div>
   </div>
 
-  <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-3">
-    <div class="text-sm text-zinc-400">Computational scale</div>
-    <div class="text-lg font-semibold text-zinc-100">&gt;10⁴⁰ solutions</div>
-    <div class="text-xs text-zinc-500">explored with ~90% CPU load</div>
+  <!-- 3 -->
+  <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 backdrop-blur px-4 py-5">
+    <div class="text-sm text-zinc-400">Toolchain</div>
+    <div class="text-lg font-semibold text-zinc-100">Python + Gurobi</div>
   </div>
 </div>
 
 
-    <!-- Actions -->
-    <div class="mt-6 flex flex-wrap gap-3">
-      <a href="#methodology"
-         class="inline-flex items-center rounded-xl bg-zinc-100 text-zinc-900
-                px-4 py-2.5 text-sm font-medium hover:bg-white/90">
-        See methodology
-      </a>
-      <a href="#results"
-         class="inline-flex items-center rounded-xl border border-zinc-700
-                px-4 py-2.5 text-sm font-medium text-zinc-200 hover:bg-zinc-800/60">
-        View results & plots
-      </a>
-    </div>
-  </div>
+
 
   <!-- Decorative network glows (neutral, no blue) -->
   <div class="pointer-events-none absolute -right-16 -bottom-16 h-64 w-64 rounded-full
