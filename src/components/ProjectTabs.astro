@@ -1,0 +1,60 @@
+---
+// src/components/ProjectTabs.astro
+---
+<section class="mt-8">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <!-- Content -->
+    <div id="panels" class="lg:col-span-8 space-y-6">
+      <!-- tus <article id="panel-..."> aquí -->
+    </div>
+
+    <!-- Sidebar derecho -->
+    <aside class="lg:col-span-4">
+      <nav aria-label="Project navigator"
+           class="sticky top-24 rounded-2xl border border-zinc-700 bg-zinc-900/70 backdrop-blur p-3">
+        <ul id="tablist" role="tablist" class="space-y-2">
+          <!-- tus <button id="tab-..."> aquí -->
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <!-- Script: en Astro usa is:inline -->
+  <script is:inline>
+    (function () {
+      const tablist = document.getElementById('tablist');
+      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+      const panels = Array.from(document.getElementById('panels').querySelectorAll('[role="tabpanel"]'));
+
+      function activateTab(tab) {
+        tabs.forEach(t => {
+          t.setAttribute('aria-selected', 'false');
+          t.classList.remove('bg-amber-400','text-zinc-900','shadow','hover:shadow-amber-400/40');
+          t.classList.add('text-zinc-200','bg-zinc-800','border','border-zinc-700');
+        });
+        panels.forEach(p => p.classList.add('hidden'));
+
+        tab.setAttribute('aria-selected', 'true');
+        tab.classList.remove('text-zinc-200','bg-zinc-800','border','border-zinc-700');
+        tab.classList.add('bg-amber-400','text-zinc-900','shadow','hover:shadow-amber-400/40');
+
+        const panelId = tab.getAttribute('aria-controls');
+        document.getElementById(panelId).classList.remove('hidden');
+        if (window.innerWidth < 1024) {
+          document.getElementById('panels').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      tabs.forEach(tab => tab.addEventListener('click', () => activateTab(tab)));
+
+      tablist.addEventListener('keydown', (e) => {
+        const i = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true');
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+          e.preventDefault(); activateTab(tabs[(i + 1) % tabs.length]); tabs[(i + 1) % tabs.length].focus();
+        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+          e.preventDefault(); activateTab(tabs[(i - 1 + tabs.length) % tabs.length]); tabs[(i - 1 + tabs.length) % tabs.length].focus();
+        }
+      });
+    })();
+  </script>
+</section>

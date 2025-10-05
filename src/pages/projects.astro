@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import CautionBox from "../components/CautionBox.astro"
+import ProjectTabs from "../components/ProjectTabs.astro"
 ---
 
 <Layout title="Paulina Castillo">
@@ -9,6 +10,16 @@ import CautionBox from "../components/CautionBox.astro"
 	<!-- Poner el aviso de poner subtitulos -->
 	<!-- <CautionBox  > Please set the subtitles in English.</CautionBox>
  -->
+	<!-- Si quieres mantener el video para más abajo, descomenta y reubícalo -->
+<!--
+<iframe
+  class="rounded-lg shadow-lg w-full h-64 md:h-96 mt-8"
+  src="https://www.youtube.com/embed/e_PV7Ig36_E"
+  title="YouTube video player"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+-->
 
 
 <section class="relative overflow-hidden rounded-2xl
@@ -130,21 +141,13 @@ import CautionBox from "../components/CautionBox.astro"
   <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full
               bg-rose-500/10 blur-3xl"></div>
 </section>
+  <ProjectTabs />
+</main>
 
 
 
 
 
 
-<!-- Si quieres mantener el video para más abajo, descomenta y reubícalo -->
-<!--
-<iframe
-  class="rounded-lg shadow-lg w-full h-64 md:h-96 mt-8"
-  src="https://www.youtube.com/embed/e_PV7Ig36_E"
-  title="YouTube video player"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
--->
 
 </Layout>
