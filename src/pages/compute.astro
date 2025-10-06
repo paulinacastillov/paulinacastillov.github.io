@@ -13,7 +13,12 @@ import ProjectNav from "../components/ProjectNav.astro";
     <div class="max-w-3xl mx-auto">
       <h2 class="text-2xl md:text-3xl font-semibold text-zinc-100 tracking-tight">Computational limits</h2>
       <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-300">
-        &gt;10⁴⁰ possible networks. We hit ~90% CPU for hours and ~12 GB RAM; we survived with batching, parallel eval, and early stopping.
+        &gt;
+      Of course, every model has its breaking point. In this case, the problem wasn’t the math — it was the scale. The moment we started trimming too many pipes, the network stopped being predictable. The optimization got hungrier, the memory heavier, and the system slower. It was as if the same neighborhood that once flowed perfectly now struggled to keep its balance.As the network kept shrinking, the real challenge began. Every pipe we closed opened thousands of new possibilities — an exponential maze of configurations waiting to be tested. Even a network with just a hundred houses could hide more than 1040010^{400}10400 potential ways to connect them. It was like trying to redesign the entire neighborhood, one valve at a time, while keeping everyone’s shower running.
+Each learning episode meant solving several optimization problems — the Minimum Cost Flow again and again — under slightly different daily demands. My computer fan became the background noise of those nights: the CPU running above 90% for hours, memory climbing past 12 GB as the model stored every cost, every gradient, every decision it made.
+To keep it all under control, I had to make the process smarter: batching tensor operations in PyTorch instead of looping through them, evaluating scenarios in parallel, and stopping the training the moment the policy stabilized. Even then, the system was working at its limit — my local machine (an i7-12700, 32 GB RAM) could barely handle 200 scenarios per iteration before memory saturation.
+It wasn’t just the network under pressure anymore; it was the hardware too. But that’s also where the model — and I — learned the most.
+
       </p>
     </div>
   </section>
