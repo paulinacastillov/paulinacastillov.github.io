@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProjectNav from "../components/ProjectNav.astro";
+import MCF from 'mathEquations/_mcf.md'; // ← importa el markdown
 
 --- 
-<Layout title="Math — Paulina Castillo">
+<!-- <Layout title="Math — Paulina Castillo">
   <h1 class="mt-10 mb-6 text-center text-4xl md:text-5xl font-bold text-zinc-50 tracking-tight leading-tight">
     The Beauty of Less: Optimization and Machine Learning in Network Design
   </h1>
@@ -19,7 +20,23 @@ import ProjectNav from "../components/ProjectNav.astro";
       <pre class="mt-4 rounded-xl bg-zinc-800/60 p-4 text-zinc-200 overflow-auto text-sm leading-6">
 Objective: minimize total cost
 s.t. flow balance per node, capacity limits, penalties for under/over supply
+
+
       </pre>
+    </div>
+  </section>
+</Layout> -->
+
+<Layout title="Math — Paulina Castillo">
+  <h1 class="mt-10 mb-6 text-center text-4xl md:text-5xl font-bold text-zinc-50">
+    The Beauty of Less: Optimization and Machine Learning in Network Design
+  </h1>
+
+  <ProjectNav active="math" />
+
+  <section class="p-6 md:p-10 mt-5 rounded-2xl border border-zinc-800/60 bg-zinc-900/60">
+    <div class="prose prose-invert max-w-none">
+      <MCF />   <!-- ← renderiza el markdown con KaTeX -->
     </div>
   </section>
 </Layout>
