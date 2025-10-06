@@ -1,4 +1,4 @@
-## Mathematical Formulation
+## Magic behind
 
 The framework combines **optimization** and **reinforcement learning** to redesign complex networks while preserving their functional behavior.  
 It works in three main stages:
@@ -7,24 +7,49 @@ It works in three main stages:
 
 ### **1️⃣ Minimum Cost Flow (MCF) — Understanding the network**
 
-The first step models how the network currently operates.
+In the first stage, the model captures how the network behaves under different demand conditions.  
+Each scenario $ \omega \in \Omega $ represents a variation in the nodal demands or flow requirements.
 
-Each node (e.g., a plant or a consumer) can supply or demand a certain amount of flow, and each connection $(i, j)$ has an associated cost $c_ij$.  
-The goal is to determine the optimal flow $x_ij$ across all connections to satisfy demand at the lowest total cost.
+The goal is to **distribute the flow efficiently** through the network, minimizing the total cost while allowing small deviations from perfect balance when necessary.
 
-**Simplified formulation:**
+### **Formulation**
+
+For each scenario $ \omega $, we solve:
 $$
-\min \sum_{(i,j)\in A} c_{ij}\,x_{ij}
+\min \sum_{(i,j)\in A} c_{ij} \, x_{ij}^{\omega}
+\; + \;
+M \sum_{i\in N} \Delta_i^{\omega}
 $$
 
 Subject to:
+
 $$
-\sum_{j:(i,j)\in A} x_{ij} - \sum_{j:(j,i)\in A} x_{ji} = b_i
+\sum_{j:(i,j)\in A} x_{ij}^{\omega}
+-
+\sum_{j:(j,i)\in A} x_{ji}^{\omega}
+=
+b_i^{\omega} + \Delta_i^{\omega},
+\quad \forall i \in N
 $$
 
-This balance ensures that every node sends and receives exactly what it should — no shortages, no excess.
+where:
+
+- $ x_{ij}^{\omega} $ — flow through arc $ (i,j) $ under scenario $ \omega $
+- $ c_{ij} $ — cost per unit of flow on arc $ (i,j) $
+- $ b_i^{\omega} $ — supply (positive) or demand (negative) at node $ i $
+- $ \Delta_i^{\omega} \ge 0 $ — deviation variable that penalizes unmet or excess demand
+- $ M $ — large penalty constant for deviations
 
 ---
+
+### **Interpretation**
+
+This model ensures that the flow entering and leaving each node is balanced as closely as possible to its expected demand.  
+When perfect balance cannot be achieved, a deviation $ \Delta_i^{\omega} $ is introduced and penalized in the objective function.
+
+By solving the MCFP for multiple scenarios $ \omega \in \Omega $,  
+we can observe how the network behaves under different demand patterns —  
+establishing a **baseline of flow efficiency** and **operational cost** for the system.
 
 ### **2️⃣ Topology Reduction — Redesigning with constraints**
 
