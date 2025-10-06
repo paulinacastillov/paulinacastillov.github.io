@@ -13,13 +13,10 @@ function Link(id: string, label: string) {
 }
 ---
 
-<div class="relative overflow-hidden rounded-2xl
-  bg-gradient-to-br from-zinc-800 via-zinc-900 to-black
-  dark:from-zinc-800 dark:via-zinc-900 dark:to-black
-  shadow-lg p-6 md:p-10 mt-5 border border-zinc-800/60">
+<div class="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-5 justify-center text-center">
   <Fragment set:html={Link('projects','Abstract')} />
   <Fragment set:html={Link('motivation','Motivation')} />
-  <Fragment set:html={Link('math','Math Fromulation')} />
-  <Fragment set:html={Link('compute','Computational')} />
+  <Fragment set:html={Link('math','Math Formulation')} />
+  <Fragment set:html={Link('compute','Computational Limits')} />
   <Fragment set:html={Link('results','Results')} />
 </div>
