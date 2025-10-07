@@ -1,6 +1,6 @@
 [{
   "institution": "The University of Oklahoma and Universidad Nacional de Colombia",
-  "position": "External Research Collaborator — Graph Theory",
+  "position": "EXTERNAL RESEARCH COLLABORATOR - GRAPH THEORY",
   "location": "Norman, OK, USA / Bogotá, Colombia (remote)",
   "year": 2025,
   "endDate": "Present",
@@ -10,15 +10,15 @@
 }
 ,
     {
-        "institution": "The University of Oklahoma",
-        "position": "Senator of the Master's in Data Science and Analytics",
+        "institution": "Gradaute Student Senate @ The University of Oklahoma",
+        "position": "DATA SCIENCE AND ANALYTICS SENATOR",
         "location": "Norman, OK, USA",
         "year": 2024,
         "description": ["Contributed to decision-making to enhance the university environment, including approving the budget for student associations at the University of Oklahoma."]
     },
     {
         "institution": "Women for Colombia Foundation",
-        "position": "Career Guidance Speaker",
+        "position": "CAREER GUIDANCE SPEAKER",
         "location": "Bogotá, Colombia",
         "year": 2023,
         "description": ["Participated as a panelist, providing guidance and sharing experiences to help high school senior girls explore their career options and make informed decisions about their futures."]
