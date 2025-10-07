@@ -17,14 +17,14 @@ const {institution, location, position, startDate, endDate, year, description} =
     <div class="absolute size-2.5 bg-orange rounded-full mt-2.5 -start-[5.5px] border border-orange dark:border-orange dark:bg-orange"></div>
 
     <!-- cajita de posición y ubicacion -->
-    <div class="flex flex-row space-y-0 justify-between items-center">
+    <div class="font-bold flex flex-row space-y-0 justify-between items-center text-lg md:text-xl">
         <h3>{position}</h3>
-        <p class="text-base opacity-80 hidden md:inline">{location}</p>
+        <p class="text-base opacity-70 hidden md:inline">{location}</p>
     </div>
 
     <!-- Pone las fechas con formato condicional  -->
     <div class="flex flex-col md:flex-row space-y-1 justify-between">
-        <span class="opacity-80 font-semibold italic text-base md:text-lg">
+        <span class="opacity-70 font-semibold italic text-base md:text-lg">
             {institution}
         </span>  
         {(startDate==="" && endDate==="") ? 
