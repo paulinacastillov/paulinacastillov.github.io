@@ -12,9 +12,9 @@ It works in three main stages.
 ### **1️⃣ Minimum Cost Flow — Understanding how the neighborhood works**
 
 Before redesigning anything, we need to understand the system’s natural behavior.  
-For each day (or *scenario* \( \omega \in \Omega \)), the model learns how water moves through the network.  
-Houses are nodes \( i \), pipelines are edges \( (i, j) \), and each house needs a certain amount of water \( b_i^{\omega} \).  
-Sending water through a pipe has a cost \( c_{ij} \), depending on distance or pressure.
+For each day (or *scenario* $ \omega \in \Omega $), the model learns how water moves through the network.  
+Houses are nodes $ i $, pipelines are edges $ (i, j) $, and each house needs a certain amount of water $ b_i^{\omega} $.  
+Sending water through a pipe has a cost $ c_{ij} $, depending on distance or pressure.
 
 The goal is simple:  
 find the cheapest way to send water so that everyone gets what they need —  
@@ -48,12 +48,12 @@ This is the essence of the **Topology Reduction** stage.
 At this point, we already know how the original network behaves — how much flow goes through each pipe and how much it costs to meet everyone’s demand.  
 Now, we want to *rebuild* it using the smallest possible number of connections, while still satisfying those demands efficiently.
 
-We introduce binary decisions \( y_{ij} \in \{0,1\} \), one for each connection:
-- \( y_{ij} = 1 \) means the connection between nodes \( i \) and \( j \) stays active.
-- \( y_{ij} = 0 \) means that pipe is removed from the system.
+We introduce binary decisions $ y_{ij} \in \{0,1\} $, one for each connection:
+- $ y_{ij} = 1 $ means the connection between nodes $ i $ and $ j $ stays active.
+- $ y_{ij} = 0 $ means that pipe is removed from the system.
 
 The model now faces a constrained optimization problem:  
-it can only use a limited number of active edges — say, \( K \) — but it still must move water across the network as effectively as before.
+it can only use a limited number of active edges — say, $ K $ — but it still must move water across the network as effectively as before.
 
 Mathematically, it minimizes a combined cost:
 $$
@@ -63,7 +63,7 @@ $$
 subject to:
 - Flow balance at every node (just like before)  
 - Capacity and feasibility of remaining connections  
-- Structural limit: \( \sum_{(i,j)\in A} y_{ij} \le K \)
+- Structural limit: $ \sum_{(i,j)\in A} y_{ij} \le K $
 
 The optimization must *choose* which pipes to keep — like an engineer deciding which streets stay open during city repairs.  
 Every possible configuration is a different version of the neighborhood:  
@@ -101,8 +101,8 @@ $$
 \theta_{t+1} = \theta_t + \alpha \nabla_\theta J(\theta_t)
 $$
 
-where \( \theta \) are the model parameters,  
-and \( J(\theta_t) \) is the expected reward — how closely the simplified network replicates the original’s behavior.
+where $ \theta $ are the model parameters,  
+and $ J(\theta_t) $ is the expected reward — how closely the simplified network replicates the original’s behavior.
 
 Conceptually, you can think of the agent as a tireless engineer running thousands of digital experiments:  
 trying new layouts, measuring how they perform, and learning which choices consistently lead to efficient, balanced networks.  

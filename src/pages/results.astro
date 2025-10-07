@@ -10,17 +10,114 @@ import ProjectNav from "../components/ProjectNav.astro";
 
   <ProjectNav active="results" />
 
-  <section class="relative overflow-hidden rounded-2xl
+<section class="relative overflow-hidden rounded-2xl
   bg-gradient-to-br from-zinc-800 via-zinc-900 to-black
-  dark:from-zinc-800 dark:via-zinc-900 dark:to-black
-  shadow-lg p-6 md:p-10 mt-5 border border-zinc-800/60">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-semibold text-zinc-100 tracking-tight">Results</h2>
-      <ul class="mt-4 text-zinc-300 list-disc pl-6 leading-relaxed">
-        <li>~34% structure reduction (66% arcs kept)</li>
-        <li>~95% flow preserved</li>
-        <li>1.8×–2.5× simulation speed-ups</li>
-      </ul>
+  shadow-lg p-6 md:p-10 mt-8 border border-zinc-800/60">
+
+  <div class="max-w-4xl mx-auto">
+    <!-- Título -->
+    <h2 class="text-2xl md:text-3xl font-semibold text-zinc-100 tracking-tight">
+      Water Network — Shelby County (Structure Preview)
+    </h2>
+
+    <!-- Intro breve -->
+    <p class="mt-4 leading-relaxed text-[1.05rem] text-zinc-300">
+      Placeholder intro text. Brief context about the water network and the applied model.
+    </p>
+
+    <!-- Quote / Callout -->
+    <div class="mt-6 rounded-2xl border border-zinc-700 bg-zinc-800/70 backdrop-blur px-5 py-4">
+      <div class="flex items-start gap-3">
+        <div class="shrink-0 text-2xl leading-none">💡</div>
+        <p class="text-zinc-200 leading-relaxed">
+          Placeholder quote/callout. A short insight or takeaway goes here.
+        </p>
+      </div>
     </div>
-  </section>
+
+    <!-- Subtítulo de la sección visual -->
+    <h3 class="mt-8 text-xl md:text-2xl font-semibold text-zinc-100 tracking-tight">
+      Visual Comparison (Original vs Reduced)
+    </h3>
+    <p class="mt-2 text-zinc-300">
+      Placeholder description for the comparison area below.
+    </p>
+
+    <!-- Tarjetas Before / After (vacías) -->
+    <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Original -->
+      <div class="rounded-xl border border-zinc-700 bg-zinc-900/50 p-4">
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-zinc-400">Layer</span>
+          <span class="text-xs rounded-full border border-zinc-700 px-2 py-0.5 text-zinc-300">Original</span>
+        </div>
+        <div class="mt-3 aspect-video rounded-lg bg-zinc-800/60 grid place-content-center text-zinc-500 text-sm">
+          <span>Original network placeholder</span>
+        </div>
+        <p class="mt-3 text-xs text-zinc-400">Short hint for the original layer.</p>
+      </div>
+
+      <!-- Reduced -->
+      <div class="rounded-xl border border-zinc-700 bg-zinc-900/50 p-4">
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-zinc-400">Layer</span>
+          <span class="text-xs rounded-full border border-zinc-700 px-2 py-0.5 text-zinc-300">Reduced</span>
+        </div>
+        <div class="mt-3 aspect-video rounded-lg bg-zinc-800/60 grid place-content-center text-zinc-500 text-sm">
+          <span>Reduced network placeholder</span>
+        </div>
+        <p class="mt-3 text-xs text-zinc-400">Short hint for the reduced layer.</p>
+      </div>
+    </div>
+
+    <!-- Ideas / Controles (3 cajitas) -->
+    <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div class="rounded-xl border border-zinc-700 bg-zinc-900/50 p-4">
+        <div class="text-sm text-zinc-400">Interaction</div>
+        <div class="mt-1 text-zinc-100 font-medium">Before/After slider</div>
+        <p class="mt-1 text-xs text-zinc-400">Short helper text.</p>
+      </div>
+      <div class="rounded-xl border border-zinc-700 bg-zinc-900/50 p-4">
+        <div class="text-sm text-zinc-400">Graph</div>
+        <div class="mt-1 text-zinc-100 font-medium">Edge intensity</div>
+        <p class="mt-1 text-xs text-zinc-400">Short helper text.</p>
+      </div>
+      <div class="rounded-xl border border-zinc-700 bg-zinc-900/50 p-4">
+        <div class="text-sm text-zinc-400">Map</div>
+        <div class="mt-1 text-zinc-100 font-medium">Leaflet / Plotly</div>
+        <p class="mt-1 text-xs text-zinc-400">Short helper text.</p>
+      </div>
+    </div>
+
+    <!-- Mini-métricas (4 cajitas) -->
+    <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-center">
+        <div class="text-sm text-zinc-400">Network</div>
+        <div class="text-lg font-semibold text-zinc-100">—</div>
+      </div>
+      <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-center">
+        <div class="text-sm text-zinc-400">Model</div>
+        <div class="text-lg font-semibold text-zinc-100">—</div>
+      </div>
+      <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-center">
+        <div class="text-sm text-zinc-400">Scenarios</div>
+        <div class="text-lg font-semibold text-zinc-100">—</div>
+      </div>
+      <div class="rounded-xl border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-center">
+        <div class="text-sm text-zinc-400">Compute</div>
+        <div class="text-lg font-semibold text-zinc-100">—</div>
+      </div>
+    </div>
+
+    <!-- Nota sutil (tesis) -->
+    <p class="mt-6 text-sm text-zinc-500">
+      <span class="opacity-90">Footnote:</span> placeholder note about this being part of a Master’s thesis and a key lesson learned.
+    </p>
+  </div>
+
+  <!-- Soft glows decorativos -->
+  <div class="pointer-events-none absolute -right-16 -bottom-16 h-64 w-64 rounded-full bg-sky-500/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl"></div>
+</section>
+
 </Layout>
