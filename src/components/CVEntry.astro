@@ -24,7 +24,9 @@ const {institution, location, position, startDate, endDate, year, description} =
 
     <!-- Pone las fechas con formato condicional  -->
     <div class="flex flex-col md:flex-row space-y-1 justify-between">
-        <i>{institution}</i>   
+        <span class="opacity-80 font-semibold italic text-base md:text-lg">
+            {institution}
+        </span>  
         {(startDate==="" && endDate==="") ? 
             (<time class="text-base opacity-80">{year}</time>) :
             (<time class="text-base opacity-80">{startDate} —  {endDate}</time>)
