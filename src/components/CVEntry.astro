@@ -19,24 +19,24 @@ const {institution, location, position, startDate, endDate, year, description} =
     <!-- cajita de posición y ubicacion -->
     <div class="font-bold flex flex-row space-y-0 justify-between items-center text-lg md:text-xl">
         <h3>{position}</h3>
-        <p class="text-base opacity-70 hidden md:inline">{location}</p>
+        <p class="text-base opacity-60 hidden md:inline">{location}</p>
     </div>
 
     <!-- Pone las fechas con formato condicional  -->
     <div class="flex flex-col md:flex-row space-y-1 justify-between">
-        <span class="opacity-70 font-semibold italic text-base md:text-lg">
+        <span class="opacity-50 font-semibold italic text-base md:text-lg">
             {institution}
         </span>  
         {(startDate==="" && endDate==="") ? 
-            (<time class="text-base opacity-80">{year}</time>) :
-            (<time class="text-base opacity-80">{startDate} —  {endDate}</time>)
+            (<time class="text-base opacity-50">{year}</time>) :
+            (<time class="text-base opacity-50">{startDate} —  {endDate}</time>)
         }
     </div>
     
     <!-- Si hay items en la descripción aparecen, si no,no  -->
     {description.length<=1 ? 
-        (<p class="text-base mt-1.5">{description[0]}</p>) :
-        (<ul class="text-base list-disc mt-1.5 pl-4">
+        (<p class="text-base  opacity-60 mt-1.5">{description[0]}</p>) :
+        (<ul class="text-base opacity-60 list-disc mt-1.5 pl-4">
             {description.map((item) => (<li>{item}</li>))}
         </ul>)
     }
