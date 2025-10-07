@@ -1,10 +1,23 @@
 [
     {
+  "institution": "William Velie Attorneys at Law",
+  "position": "Business Data Analyst",
+  "location": "Norman, OK, USA",
+  "startDate": "June 2025",
+  "endDate": "Present",
+  "description": [
+    "Built a passport-reading workflow using OCR + neural networks (Python, OpenCV, Tesseract, PyTorch), cutting data-entry time by ~70×.",
+    "Developed a pipeline that parses bank payment confirmations and auto-generates incoming fees matched to matters, reducing the Finance handoff by ~50%.",
+    "Proposed and delivered tech solutions tailored to the firm’s needs, turning operational pain points into scoped automations with clear ROI."
+  ]
+},
+
+    {
         "institution": "Netsys Research Lab @ The University of Oklahoma",
         "position": "Graduate Research Assistant",
         "location": "Norman, OK, USA",
         "startDate": "January 2024",
-        "endDate": "Present",
+        "endDate": "August 2025",
         "description": [
             "Developed an optimization model for graph design based on multi-scenario analysis, each with varying demands, ensuring the graph adapts to fluctuations and provides a resilient solution.",
             "Focused on creating a network that efficiently accommodates demand variability, enhancing resilience and reliability in complex systems."
