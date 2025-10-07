@@ -1,4 +1,14 @@
-[
+[{
+  "institution": "The University of Oklahoma & Universidad Nacional de Colombia",
+  "position": "External Research Collaborator — Graph Theory",
+  "location": "Norman, OK, USA / Bogotá, Colombia (remote)",
+  "startDate": "2024",
+  "endDate": "Present",
+  "description": [
+    "Co-initiated a course-based research collaboration that led to a graduate seminar at UNAL; support course design, mentor projects, and pursue an extension of prior graph-design research in close collaboration with my OU advisor."
+  ]
+}
+,
     {
         "institution": "The University of Oklahoma",
         "position": "Senator of the Master's in Data Science and Analytics",
@@ -8,16 +18,9 @@
     },
     {
         "institution": "Women for Colombia Foundation",
-        "position": "Volunteer Speaker",
+        "position": "Career Guidance Speaker",
         "location": "Bogotá, Colombia",
         "year": 2023,
         "description": ["Participated as a panelist, providing guidance and sharing experiences to help high school senior girls explore their career options and make informed decisions about their futures."]
-    },
-    {
-        "institution": "Universidad Nacional de Colombia",
-        "position": "Student Volunteer",
-        "location": "Bogotá, Colombia",
-        "year": 2022,
-        "description": ["Plan Par is an initiative at the Universidad Nacional de Colombia to accompany students from the Special Admission Program, providing a guide through their first year at the university to reduce desertion rates of students from peripheral regions."]
     }
 ]
