@@ -35,8 +35,8 @@ const {institution, location, position, startDate, endDate, year, description} =
     
     <!-- Si hay items en la descripción aparecen, si no,no  -->
     {description.length<=1 ? 
-        (<p class="text-base  opacity-60 mt-1.5">{description[0]}</p>) :
-        (<ul class="text-base opacity-60 list-disc mt-1.5 pl-4">
+        (<p class="text-base  opacity-70 mt-1.5">{description[0]}</p>) :
+        (<ul class="text-base opacity-70 list-disc mt-1.5 pl-4">
             {description.map((item) => (<li>{item}</li>))}
         </ul>)
     }
